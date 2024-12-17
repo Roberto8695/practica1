@@ -8,7 +8,7 @@ export const setToken = (newToken) => {
 };
 
 const api = axios.create({
-    baseURL: 'http://localhost:3001/api',
+    baseURL: `http://${process.env.REACT_APP_BACKEND_HOST || '192.168.190.93.'}:3001/api`,  // Cambia a tu IP local
     headers: {
         'Content-Type': 'application/json',
     },
